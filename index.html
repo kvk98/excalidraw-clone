@@ -17,7 +17,7 @@
 <body>
     <div class="topbar">
         <div class="topbarMenu">
-            <button><i class="fa-solid fa-bars" style="color: #7f7f7f;"></i></button>
+            <button class="menu"><i class="fa-solid fa-bars"></i></button>
             <!-- <ul class="dropdown">
                 <li><a href="#"><i class="fa-regular fa-folder" style="color: #7f7f7f;"></i>Open</a></li>
                 <li><a href="#"><i class="fa-solid fa-download" style="color: #7f7f7f;"></i>Save to...</a></li>
@@ -51,55 +51,58 @@
         </div>
         <div>
             <div class="topbarTools">
-                <button><i class="fa-solid fa-unlock-keyhole" style="color: #6d6d6d;"></i></i></button>
+                <button class="btn"><i class="fa-solid fa-unlock-keyhole" style="color: #6d6d6d;"></i></i></button>
                 <p class="verticalLine"></p>
-                <button><i class="fa-regular fa-hand" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-arrow-pointer" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-regular fa-square" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-diamond" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-regular fa-circle" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-arrow-right" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-minus" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-pencil" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-font" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-regular fa-image" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-eraser" style="color: #6d6d6d;"></i></button>
+                <button class="btn"><i class="fa-regular fa-hand" style="color: #6d6d6d;"></i></button>
+                <button class="btn"><i class="fa-solid fa-arrow-pointer" style="color: #6d6d6d;"></i><sub>1</sub></button>
+                <button class="btn"><i class="fa-regular fa-square" style="color: #6d6d6d;"></i><sub>2</sub></button>
+                <button class="btn"><i class="fa-solid fa-diamond" style="color: #6d6d6d;"></i><sub>3</sub></button>
+                <button class="btn"><i class="fa-regular fa-circle" style="color: #6d6d6d;"></i><sub>4</sub></button>
+                <button class="btn"><i class="fa-solid fa-arrow-right" style="color: #6d6d6d;"></i><sub>5</sub></button>
+                <button class="btn"><i class="fa-solid fa-minus" style="color: #6d6d6d;"></i><sub>6</sub></button>
+                <button class="btn" id="pencil"><i class="fa-solid fa-pencil" style="color: #6d6d6d;"></i><sub>7</sub></button>
+                <button class="btn"><i class="fa-solid fa-font" style="color: #6d6d6d;"></i><sub>8</sub></button>
+                <button class="btn"><i class="fa-regular fa-image" style="color: #6d6d6d;"></i><sub>9</sub></button>
+                <button class="btn"><i class="fa-solid fa-eraser" style="color: #6d6d6d;"></i><sub>0</sub></button>
                 <p class="verticalLine"></p>
-                <button><i class="fa-solid fa-shapes" style="color: #6d6d6d;"></i></button>
+                <button class="btn"><i class="fa-solid fa-shapes" style="color: #6d6d6d;"></i></button>
             </div>
             <div class="instruction">
                 <p>To move canvas, hold mouse wheel or spacebar while dragging, or use the hand tool</p>
             </div>
         </div>
-        <div class="topbarRightMenu">
-            <button style="background-color: #6965db;"><i class="fa-solid fa-user-group" style="color: white ;background-color: #6965db;"></i></button>
-            <button>
-                <p><i class="fa-solid fa-book-open" style="color: #6d6d6d;"></i>Library</p>
+        <div class="rightbtns">
+            <button class="btn" style="background-color: #6965db; border-radius: 10px; color: white;"><i class="fa-solid fa-user-group"></i></button>
+            <button class="btn" style="background-color: #ececf4; border-radius: 10px;">
+                <p style="background-color: transparent;"><i class="fa-solid fa-book-open" style="color: #6d6d6d;padding-right: 10px;"></i>Library</p>
             </button>
         </div>
     </div>
-    
-   <div class="bottom">
-    <div class="bottombar">
-        <div class="bottomIcons">
-            <div>
-                <div class="zoomIcons">
-                    <button><i class="fa-solid fa-minus" style="color: #6d6d6d;"></i></button>
-                    <p>100%</p>
-                    <button><i class="fa-solid fa-plus" style="color: #6d6d6d;"></i></button>
+    <canvas id="canvas"></canvas>
+    <div class="bottom">
+        <div class="bottombar">
+            <div class="bottomIcons">
+                <div>
+                    <div class="zoomIcons">
+                        <button class="btn" style="background-color: #ececf4;border-top-left-radius: 10px;border-bottom-left-radius: 10px;"><i class="fa-solid fa-minus" style="color: #6d6d6d;"></i></button>
+                        <p>100%</p>
+                        <button class="btn" style="background-color: #ececf4;border-top-right-radius: 10px;border-bottom-right-radius: 10px;"><i class="fa-solid fa-plus" style="color: #6d6d6d;"></i></button>
+                    </div>
+                </div>
+                <div class="undoRedo">
+                    <button class="btn" style="background-color: #ececf4; border-top-left-radius: 10px;border-bottom-left-radius: 10px;"><i class="fa-solid fa-arrow-turn-up fa-rotate-270" style="color: #6d6d6d;"></i></button>
+                    <button class="btn" style="background-color: #ececf4;border-top-right-radius: 10px;border-bottom-right-radius: 10px;"><i class="fa-solid fa-arrow-turn-down fa-rotate-270" style="color: #6d6d6d;"></i></button>
                 </div>
             </div>
             <div>
-                <button><i class="fa-solid fa-arrow-turn-up fa-rotate-270" style="color: #6d6d6d;"></i></button>
-                <button><i class="fa-solid fa-arrow-turn-down fa-rotate-270" style="color: #6d6d6d;"></i></button>
+                <i class="fa-solid fa-shield" style="color: #6d6d6d;"
+                    title="Your drawings are end-to-end encripted so Excalidraw's servers will never see them."></i>
+                <button class="btn" style="background-color: #ececf4; border-radius: 10px;"><i class="fa-regular fa-circle-question" style="color: #6d6d6d;"></i></button>
             </div>
         </div>
-        <div>
-            <i class="fa-solid fa-shield" style="color: #6d6d6d;"></i>
-            <button><i class="fa-regular fa-circle-question" style="color: #6d6d6d;"></i></button>
-        </div>
     </div>
-   </div>
+    <script src="script.js"></script>
+    <script src="freehand.js"></script>
 </body>
 
 </html>
